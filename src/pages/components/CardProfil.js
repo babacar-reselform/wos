@@ -67,7 +67,7 @@ const CardComponent = ({
           </div>
         </Col>
 
-        <Col xs={12} md={7} className="text-start p-0">
+        <Col xs={12} md={7} className="text-start p-1">
           <Card.Text className="wos-fill-btn">{price}/mois</Card.Text>
           <Card.Title className="blueNuit">{profil}</Card.Title>
           <Card.Text className="blueNuit">Expérience : {experience}</Card.Text>
@@ -99,11 +99,11 @@ const CardComponent = ({
       </Row>
       <div className="mt-3">
         {pills.map((pill, index) => (
-          <Badge key={index} style={styles.badgeContainer} className="mr-2">
+          <Badge key={index}  className="badge-container mr-2">
             {pill}
           </Badge>
         ))}
-        <Badge style={styles.badgeContainer} className="mr-2">
+        <Badge  className="badge-container  mr-2">
           +4
         </Badge>
       </div>
