@@ -65,6 +65,13 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
+.text-gradient {
+  background: linear-gradient(90deg, var(--violet-wos), var(--rose-wos), var(--orange-wos));
+  font-family: "Bricolage Grotesque" !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
 
 .welcomeContainer {
   width: 55% !important;
@@ -186,6 +193,14 @@ input {
 
   }
 }
+@media (max-width: 1300px) {
+
+  .profil-column {
+
+    padding: 100px 55px !important;
+    
+  }
+}
 
 @media (max-width: 980px) {
   .profil-column {
@@ -225,7 +240,7 @@ input {
   }
 
   .profil-column {
-    padding: 100px 5px !important;
+    padding: 100px 50px !important;
   }
 
   .h5 {

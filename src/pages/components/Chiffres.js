@@ -10,8 +10,7 @@ const styles = {
     alignItems: "center",
     width: "100%",
   },
-  profilImgBanner: {
-    borderRadius: "20px",
+  worldMap: {
   },
 
   icon: {
@@ -21,12 +20,12 @@ const styles = {
   titleCard: {
     fontFamily: "Bricolage Grotesque",
     fontWeight: "600",
-    margin: "20px 0px",
+    margin: "5x 0px",
   },
   descriptionCard: {
     fontFamily: "DM Sans",
     fontWeight: "300",
-    margin: "10px 0px",
+    margin: "2px 0px",
   },
 
   afterHeroContainer: {
@@ -73,7 +72,7 @@ const chiffresDatas = [
   {
     id: 1,
     title: "clients satisfaits",
-    value: "98ù",
+    value: "98%",
   },
   {
     id: 1,
@@ -84,17 +83,20 @@ const chiffresDatas = [
 
 function Chiffres() {
   return (
-    <Row className="container-fluid justify-content-center g-0 bg-blue-wos">
-      <Col>
+    <Row className="container-fluid justify-content-center align-items-center g-0 bg-blue-wos ">
+      <Col md={12} lg={6} className="text-start">
       <img
           src={`${process.env.PUBLIC_URL}/images/world.svg`}
           className="img-fluid"
           alt="Profil Entreprise"
-          style={styles.profilImgBanner}
+          style={styles.worldMap}
         />
       </Col>
-      <Col>
-        <Row>
+      <Col md={12} lg={6} className="d-flex justify-content-center py-5">
+        <Row className="container">
+        <h1 className="h1 mr-5 text-white" >
+        Wall Of Share c’est :
+        </h1>
           {chiffresDatas.map((chiffre, index) => (
             <ChiffreBox {...chiffre} />
           ))}
@@ -106,13 +108,11 @@ function Chiffres() {
 
 function ChiffreBox({ title, value }) {
   return (
-    <Col md={6} sm={12} className={`text-start   `}>
-      <div className="">
-        <h1 className={`h1 mr-5`} style={styles.titleCard}>
-          {title}
+    <Col sm={6}  className=" m-0 flex-column align-items-center my-2" >
+        <h1 className="display-2 mr-5 text-gradient" style={styles.titleCard}>
+          {value}
         </h1>
-        <p style={styles.descriptionCard}>{value}</p>
-      </div>
+        <p style={styles.descriptionCard} className="text-white">{title}</p>
     </Col>
   );
 }

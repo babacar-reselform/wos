@@ -172,7 +172,6 @@ function SidebarDetails() {
       </ul>
       <Button style={styles.alertButton}>
       <img src={`${process.env.PUBLIC_URL}/icons/notifications.svg`} style={styles.alertIcon}></img>
-
         Créer une alerte</Button>
     </div>
   );

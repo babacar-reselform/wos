@@ -136,10 +136,10 @@ function ServiceDetailWOS() {
           className="container-fluid filterContainer"
           style={styles.filterContainer}
         >
-          <Col lg={3} md={6}>
+          <Col lg={3} md={12}>
             <SidebarDetails></SidebarDetails>
           </Col>
-          <Col lg={9} md={6} className="bg-white container-fluid">
+          <Col lg={9} md={12} className="bg-white container-fluid">
             <CardProfil />
           </Col>
         </Row>
@@ -147,6 +147,7 @@ function ServiceDetailWOS() {
         <Container>
           <PricingDetails />
         </Container>
+        <Chiffres />
         <ContactFooter />
       </div>
     </div>

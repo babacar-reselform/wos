@@ -45,7 +45,7 @@ const CardComponent = ({
   price,
   pills,
 }) => (
-  <Card style={styles.cardProfil} className="mb-4">
+  <Card style={styles.cardProfil} className="mb-4 p-2">
     <Card.Body>
       <Row>
         <Col xs={12} md={5} className="position-relative text-center p-0">
@@ -322,26 +322,13 @@ const CardProfil = () => {
   return (
     <div className="container-fluid">
       <Row>
-        {cardsData.slice(0, 3).map((card, index) => (
-          <Col key={index} sm={12} md={12} lg={4}>
+        {cardsData.map((card, index) => (
+          <Col key={index} sm={12} md={6} lg={4}>
             <CardComponent {...card} />
           </Col>
         ))}
       </Row>
-      <Row>
-        {cardsData.slice(3, 6).map((card, index) => (
-          <Col key={index} sm={12} md={12} lg={4}>
-            <CardComponent {...card} />
-          </Col>
-        ))}
-      </Row>
-      <Row>
-        {cardsData.slice(6, 9).map((card, index) => (
-          <Col key={index} sm={12} md={12} lg={4}>
-            <CardComponent {...card} />
-          </Col>
-        ))}
-      </Row>
+
     </div>
   );
 };
