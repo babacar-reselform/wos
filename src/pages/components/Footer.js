@@ -151,7 +151,7 @@ function Footer() {
       style={styles.contactContainer}
     >
       <Row className="container-fluid">
-        <Col className="text-start">
+        <Col className="text-start mt-4" sm={6} md={4} lg={4} xl={4}>
           <img
             src={`${process.env.PUBLIC_URL}/logo-light.svg`}
             alt="WOS"
@@ -166,18 +166,22 @@ function Footer() {
         {linksDatas.map((link, index) => (
           <LinkFooter {...link} key={index} />
         ))}
-        <hr className="my-4 text-gray2-wos" />
+      </Row>
+      <div className="container-fluid">
+        <hr className="my-5 text-gray2-wos" />
         <p style={styles.descriptionCard}>
           2024 © Wall Of Share Tous droits réservés
         </p>
-      </Row>
+      </div>
     </div>
   );
 }
 function LinkFooter({ title, links }) {
   return (
-    <Col className="text-start ">
-      <p style={styles.descriptionCard} className="p-0">{title}</p>
+    <Col className="text-start mt-4" sm={6} md={4} lg={4} xl={2}>
+      <p style={styles.descriptionCard} className="p-0">
+        {title}
+      </p>
       <ListGroup>
         {links.map((item) => (
           <ListGroup.Item style={styles.linkItem}>{item.label}</ListGroup.Item>
