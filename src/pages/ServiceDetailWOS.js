@@ -148,7 +148,6 @@ function ServiceDetailWOS() {
           <PricingDetails />
         </Container>
         <ContactFooter />
-        <Chiffres />
       </div>
     </div>
   );

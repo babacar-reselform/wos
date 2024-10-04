@@ -69,7 +69,7 @@ function AfterHeroDetails({ title }) {
       <Row className="container-fluid justify-content-center g-5 mt-3">
         <Col md={4} sm={12} className="text-start">
           <img
-            src="icons/excellence-icon.svg"
+            src={`${process.env.PUBLIC_URL}/icons/excellence-icon.svg`}
             alt="Excellence garantie"
             style={styles.icon}
           />
@@ -83,7 +83,7 @@ function AfterHeroDetails({ title }) {
         </Col>
         <Col md={4} sm={12} className="text-start">
           <img
-            src="icons/talents-icon.svg"
+            src={`${process.env.PUBLIC_URL}/icons/talents-icon.svg`}
             alt="Talents de haute qualité"
             style={styles.icon}
           />
@@ -97,7 +97,7 @@ function AfterHeroDetails({ title }) {
         </Col>
         <Col md={4} sm={12} className="text-start">
           <img
-            src="icons/simplicite-icon.svg"
+            src={`${process.env.PUBLIC_URL}/icons/simplicite-icon.svg`}
             alt="Simplicité et rapidité"
             style={styles.icon}
           />

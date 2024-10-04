@@ -156,7 +156,7 @@ function SidebarDetails() {
           Filtres
         </h4>
         <span style={styles.restartContainer}>
-          <img src="icons/restart_alt.svg" style={styles.icon}></img>
+          <img src={`${process.env.PUBLIC_URL}/icons/restart_alt.svg`} style={styles.icon}></img>
         </span>
       </div>
       <ul style={styles.itemsFilterContainer} className="mt-3">
@@ -171,7 +171,7 @@ function SidebarDetails() {
         ))}
       </ul>
       <Button style={styles.alertButton}>
-      <img src="icons/notifications.svg" style={styles.alertIcon}></img>
+      <img src={`${process.env.PUBLIC_URL}/icons/notifications.svg`} style={styles.alertIcon}></img>
 
         Créer une alerte</Button>
     </div>

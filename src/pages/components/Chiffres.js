@@ -87,7 +87,7 @@ function Chiffres() {
     <Row className="container-fluid justify-content-center g-0 bg-blue-wos">
       <Col>
       <img
-          src="images/world.svg"
+          src={`${process.env.PUBLIC_URL}/images/world.svg`}
           className="img-fluid"
           alt="Profil Entreprise"
           style={styles.profilImgBanner}

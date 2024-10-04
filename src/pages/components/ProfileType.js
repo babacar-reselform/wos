@@ -110,7 +110,7 @@ function ProfilBox({
     <Col lg={6} sm={12} className={`text-start profil-column  ${bgColor}`}>
       <div className="">
         <img
-          src={`images/${imgBanner}`}
+          src={`${process.env.PUBLIC_URL}/images/${imgBanner}`}
           className="img-fluid"
           alt="Profil Entreprise"
           style={styles.profilImgBanner}

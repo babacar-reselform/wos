@@ -57,7 +57,7 @@ const CardComponent = ({
             </span>
             {/* Profile image */}
             <Image
-              src={`images/workers/${image}`}
+              src={`${process.env.PUBLIC_URL}/images/workers/${image}`}
               fluid
               style={styles.imageProfil}
               className="profile-image"
@@ -74,11 +74,11 @@ const CardComponent = ({
           <div className="d-flex">
             {hasReview ? (
               <>
-                <img src="icons/star-fill.svg" className="mx-1" />
-                <img src="icons/star-fill.svg" className="mx-1" />
-                <img src="icons/star-fill.svg" className="mx-1" />
-                <img src="icons/star-fill.svg" className="mx-1" />
-                <img src="icons/star-stroke.svg" className="mx-1" />
+                <img src={`${process.env.PUBLIC_URL}/icons/star-fill.svg`} className="mx-1" />
+                <img src={`${process.env.PUBLIC_URL}/icons/star-fill.svg`} className="mx-1" />
+                <img src={`${process.env.PUBLIC_URL}/icons/star-fill.svg`} className="mx-1" />
+                <img src={`${process.env.PUBLIC_URL}/icons/star-fill.svg`} className="mx-1" />
+                <img src={`${process.env.PUBLIC_URL}/icons/star-stroke.svg`} className="mx-1" />
                 <span className="fw-bold">({review})</span>
               </>
             ) : (
@@ -87,7 +87,7 @@ const CardComponent = ({
           </div>
           <div className="d-flex align-items-center">
             <div style={styles.audioContainer}>
-              <img src="icons/audio-icon.svg" style={styles.icon} />
+              <img src={`${process.env.PUBLIC_URL}/icons/audio-icon.svg`} style={styles.icon} />
             </div>
             <div>
               <p style={styles.audioTetxt} className="m-auto mx-1">

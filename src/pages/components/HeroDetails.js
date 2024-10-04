@@ -19,7 +19,7 @@ const styles = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundImage: "linear-gradient(to bottom, rgba(29, 29, 57,0.9), rgba(29, 29, 57,0.9)), url(images/hero-dev-web-mobile.png)",
+    backgroundImage: `linear-gradient(to bottom, rgba(29, 29, 57, 0.9), rgba(29, 29, 57, 0.9)), url(${process.env.PUBLIC_URL}/images/hero-dev-web-mobile.png)`,
     // backgroundImage: "linear-gradient(to bottom, rgba(29, 29, 57, 1), rgba(29, 29, 57, 1, 0.9)), url(images/hero-dev-web-mobile.png)",
     backgroundBlendMode: "normal",
     padding: "125px 300px",

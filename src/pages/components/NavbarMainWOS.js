@@ -52,7 +52,7 @@ function NavbarMainWOS() {
     >
       <Container style={styles.container}>
         <Navbar.Brand href="#" style={styles.brand}>
-          <img src="icons/logo-wos.svg" alt="WOS" style={styles.logo} />
+          <img src={`${process.env.PUBLIC_URL}/icons/logo-wos.svg`} alt="WOS" style={styles.logo} />
         </Navbar.Brand>
 
         {/* Navbar Toggle for mobile view */}

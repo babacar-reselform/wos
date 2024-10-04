@@ -136,12 +136,12 @@ function SignUp() {
         <Container className="profilContainer mt-5 mx-auto ">
           <div className="row g-5 text-center pt-5  ">
             <CardOverlay
-              img="/images/entreprise-card.png"
+              img={`${process.env.PUBLIC_URL}/images/entreprise-card.png`}
               title="Je suis une entreprise"
               description="Lorem ipsum dolor sit lorem amet consectetur."
             />
             <CardOverlay
-              img="/images/freelance-card.png"
+              img={`${process.env.PUBLIC_URL}/images/freelance-card.png`}
               title="Je suis un freelance"
               description="Lorem ipsum dolor sit lorem amet consectetur."
             />
