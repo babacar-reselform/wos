@@ -1,0 +1,261 @@
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment ça marche ?</title>
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .main-container {
+        width: 100%;
+        max-width: 1400px;
+        padding: 50px 20px;
+        text-align: center;
+        background: linear-gradient(
+            rgba(27, 28, 58, 0.8),
+            rgba(27, 28, 58, 1),
+            rgba(27, 28, 58, 1)
+          ),
+          url("images/beut.jpg");
+
+        background-size: cover; /* Pour couvrir toute la zone */
+        background-position: center; /* Pour centrer l'image */
+      }
+      .header {
+        margin-bottom: 50px;
+      }
+
+      /* Tagline with gradient border and text */
+      .tagline {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 14px;
+        background: transparent;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        border-image: linear-gradient(90deg, #895ef6, #f03063, #ff7640) 1;
+        background: linear-gradient(180deg, #895ef6, #f03063, #ff7640);
+        -webkit-background-clip: text;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      .description {
+        font-size: 16px;
+        color: #ccc;
+        margin-bottom: 40px;
+      }
+
+      .steps-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 15px;
+      }
+
+      .step {
+        background-color: white;
+        color: black;
+        padding: 30px;
+        border-radius: 10px;
+        width: 350px;
+        text-align: left;
+        margin: 30px 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      .number {
+        font-size: 36px;
+        font-weight: bold;
+        background: linear-gradient(180deg, #895ef6, #f03063, #ff7640);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      p {
+        font-size: 14px;
+        color: #666;
+      }
+
+      /* Ligne verticale avec un dégradé aux extrémités */
+      .line {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        background: linear-gradient(
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0.07)
+        );
+        z-index: 0;
+      }
+
+      /* Alternating step positioning */
+      .step.left {
+        margin-right: 60%;
+      }
+
+      .step.right {
+        margin-left: 60%;
+      }
+
+      /* The dots (only fully white) */
+      .dot {
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: calc(50% - 10px); /* Center the dot */
+        z-index: 1;
+      }
+
+      .dot:nth-child(2) {
+        top: 140px;
+      }
+
+      .dot:nth-child(4) {
+        top: 410px;
+      }
+
+      .dot:nth-child(6) {
+        top: 650px;
+      }
+
+      /* Button at the bottom */
+      .button-container {
+        margin-top: 40px;
+      }
+
+      .cta-button {
+        background: linear-gradient(90deg, #895ef6, #f03063, #ff7640);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background: linear-gradient(90deg, #ff7640, #f03063, #895ef6);
+      }
+
+      /* Responsive behavior for mobile */
+      @media (max-width: 768px) {
+        .line {
+          background: linear-gradient(
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.07)
+          );
+        }
+
+        .step {
+          width: 100%;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        .dot {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="header">
+        <p class="tagline">Vous êtes une entreprise</p>
+        <h1>Comment ça marche ?</h1>
+        <p class="description">
+          Découvrez un processus simple et rapide pour trouver les meilleurs
+          talents et gérer vos projets en toute sérénité, cela à la publication
+          de votre mission à sa réalisation.
+        </p>
+      </div>
+
+      <div class="steps-container">
+        <div class="line"></div>
+
+        <div class="dot"></div>
+        <div class="step left">
+          <div class="number">01</div>
+          <h3>Créez votre compte et publiez votre mission rapidement</h3>
+          <p>
+            Accédez à une plateforme simplifiée pour créer un compte et publier
+            des missions facilement.
+          </p>
+        </div>
+
+        <div class="dot"></div>
+        <div class="step right">
+          <div class="number">02</div>
+          <h3>Accédez à des freelances qualifiés en un temps record</h3>
+          <p>
+            Des freelances sélectionnés selon vos besoins, prêts à réaliser
+            votre mission.
+          </p>
+        </div>
+
+        <div class="dot"></div>
+        <div class="step left">
+          <div class="number">03</div>
+          <h3>Suivi de projet simplifié avec gestion automatisée</h3>
+          <p>
+            Suivi simplifié du projet, gestion de la facturation et
+            automatisation des tâches administratives.
+          </p>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="cta-button">Lancez votre projet aujourd'hui</button>
+      </div>
+    </div>
+  </body>
+</html>

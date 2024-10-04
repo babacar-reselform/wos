@@ -1,0 +1,96 @@
+body{
+  font-family : "'Bricolage Grotesque'";
+  height: 100vh;
+  background-color: #F4F4F5;
+
+}
+.App {
+  font-family : "'Bricolage Grotesque'";
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #1d1d39;
+}
+
+/* .submitButton {
+  font-family: "Bricolage Grotesque" !important;
+  width : 100% !important;
+  padding: 20px 30px !important;
+  background: linear-gradient(90deg, #895EF6, #F03063, #FF7640) !important;
+  border: none !important;
+  border-radius: 100px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+} */
+.titleCard{
+  font-family: "Bricolage Grotesque" !important;
+  font-size: 2.3rem;
+  text-align: start;
+}
+.titleDescription{
+  font-family: "DM Sans" !important;
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-align: start;
+  color: #BBBBC4;
+}
+
+.card-img-overlay{
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  margin: 0px 100px 30px 30px;
+}
+.cardOverlay{
+  border: none;
+  background: none;
+}
+
+@media  (max-width: 1200px) {
+    .profilContainer{
+      width: 100% !important;
+      margin-top: 0rem;
+    }
+    .titleCard{
+      font-size: 2rem;
+    }
+}
+
+@media  (max-width: 500px) {
+  .card-img-overlay{
+    margin: 0px 30px 30px 30px;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
