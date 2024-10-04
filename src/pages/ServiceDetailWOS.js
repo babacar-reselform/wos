@@ -15,6 +15,7 @@ import ProfileType from "./components/ProfileType";
 import PricingDetails from "./components/PricingDetails";
 import ContactFooter from "./components/ContactFooter";
 import Chiffres from "./components/Chiffres";
+import Footer from "./components/Footer";
 
 // Externalized Styles
 const styles = {
@@ -149,6 +150,7 @@ function ServiceDetailWOS() {
         </Container>
         <Chiffres />
         <ContactFooter />
+        <Footer/>
       </div>
     </div>
   );
