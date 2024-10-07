@@ -18,6 +18,7 @@ import Chiffres from "./components/Chiffres";
 import Footer from "./components/Footer";
 import HowItWorks from "./components/HowItWorks";
 import About from "./components/About";
+import PaymentMethod from "./components/PaymentMethod";
 
 // Externalized Styles
 const styles = {
@@ -153,6 +154,7 @@ function ServiceDetailWOS() {
         <HowItWorks />
         <About />
         <Chiffres />
+        <PaymentMethod />
         <ContactFooter />
         <Footer/>
       </div>
