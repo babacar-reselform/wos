@@ -109,7 +109,7 @@ function Chiffres() {
 function ChiffreBox({ title, value }) {
   return (
     <Col sm={6}  className=" m-0 flex-column align-items-center my-2" >
-        <h1 className="display-2 mr-5 text-gradient" style={styles.titleCard}>
+        <h1 className="display-2 mr-5 gradientTitle" style={styles.titleCard}>
           {value}
         </h1>
         <p style={styles.descriptionCard} className="text-white">{title}</p>

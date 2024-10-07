@@ -7,7 +7,6 @@ import {
   Image,
   Row,
 } from "react-bootstrap";
-// Externalized Styles
 const styles = {
   cardProfil: {
     fontFamily: "'DM Sans' !important",
@@ -151,7 +150,7 @@ function PricingDetails({ title, subTitle }) {
         <Row className="justify-content-center gx-3">
           {cardsData.map((card, index) => (
             <Col key={index} sm={12} md={6} lg={4}>
-              <CardComponent {...card} />
+              <CardComponent {...card} key={card.id} />
             </Col>
           ))}
         </Row>
