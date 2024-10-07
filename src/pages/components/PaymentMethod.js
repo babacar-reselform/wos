@@ -51,7 +51,6 @@ const styles = {
     color: "#1D1D39",
     // fontSize: "60px",
     fontFamily: "Bricolage Grotesque",
-
     textAlign: "center",
     fontWeight: "500",
   },
@@ -133,7 +132,7 @@ function PaymentMethod({ title }) {
     >
         <div className="container">
 
-      <Row className="container-fluid justify-content-center mt-3 g-4 ">
+      <Row className="container-fluid justify-content-center  g-4 ">
         <Col md={12} lg={5}>
           <h2 style={styles.welcomeTitle} className="h2 text-start blueNuit ">
             {title ? title : "Des paiements sécurisés, adaptés à vos besoins."}

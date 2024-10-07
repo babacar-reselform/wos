@@ -323,7 +323,7 @@ const CardProfil = () => {
     <div className="container-fluid">
       <Row>
         {cardsData.map((card, index) => (
-          <Col key={index} sm={12} md={6} lg={4}>
+          <Col key={index} sm={12} md={6} xxl={4}>
             <CardComponent {...card} />
           </Col>
         ))}

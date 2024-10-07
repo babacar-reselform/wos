@@ -19,6 +19,7 @@ import Footer from "./components/Footer";
 import HowItWorks from "./components/HowItWorks";
 import About from "./components/About";
 import PaymentMethod from "./components/PaymentMethod";
+import Categories from "./components/Categories";
 
 // Externalized Styles
 const styles = {
@@ -155,6 +156,7 @@ function ServiceDetailWOS() {
         <About />
         <Chiffres />
         <PaymentMethod />
+        <Categories/>
         <ContactFooter />
         <Footer/>
       </div>

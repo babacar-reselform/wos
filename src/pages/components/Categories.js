@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Badge, Button, Card, Col, Container, Image, Row } from "react-bootstrap";
 
 const styles = {
   blueNuit: {
@@ -70,10 +70,10 @@ const styles = {
     fontWeight: "300",
   },
   findBtn: {
-    fontFamily : "DM Sans"
+    fontFamily: "DM Sans",
   },
 };
-const aboutDatas = [
+const cardsDatas = [
   {
     id: 1,
     title: "Lorem ipsum dolor sit amet consectur.",
@@ -94,94 +94,94 @@ const aboutDatas = [
   },
 ];
 
-function About({ title }) {
+function Categories({ title }) {
   return (
     <Container className="afterHeroContainer" style={styles.afterHeroContainer}>
-      <div className="about-hero" style={styles.aboutHero}>
-        <h2 className="h2 text-white" style={styles.titleCard}>
-          Talents de haute qualité, tarifs inégalés
+      <div>
+        <h2 className="h2 text-bleu-nuit text-start" style={styles.titleCard}>
+          Nos différentes catégories{" "}
         </h2>
-        <p style={styles.descriptionTitle} className="text-gray2-wos ">
-          Profitez des meilleurs freelances, rigoureusement sélectionnés et
-          testés, à des prix
-          <br /> défiant toute concurrence.
-        </p>
-        <Button className="h4 find-btn" style={styles.findBtn}>
-          Découvrez nos talents d'exception{" "}
-        </Button>
+        <Row>
+          <Col md={12} xl={8}>
+            <p
+              style={styles.descriptionTitle}
+              className="text-gray-wos text-start"
+            >
+              Explorez une gamme complète de services spécialisés, adaptés à vos
+              besoins et réalisés par des experts qualifiés.
+            </p>
+          </Col>
+          <Col md={12} xl={4} className=" text-sm-start text-md-start text-xl-end" s>
+            <Button className="h4 find-btn" style={styles.findBtn}>
+              Voir toutes nos catégories{" "}
+            </Button>
+          </Col>
+        </Row>
+       
+
       </div>
-      <Row className="mt-5">
-        <Col md={12} xl={8} className="text-start">
-          {aboutDatas.map((data, index) => {
-            return (
-              <>
-                <h2 className="h2" style={styles.titleCard}>
-                  {data.title}
-                </h2>
-                {data.description.map((line) => {
-                  return (
-                    <p style={styles.descriptionCard} className="mt-3">
-                      {line}
-                    </p>
-                  );
-                })}
-              </>
-            );
-          })}
-        </Col>
-        <Col md={12} xl={4} className="text-start">
-          <div className=" p-2 card-number card-gray">
-            <h4 className="gradientTitle" >
-            Rejoignez Wall Of Share
-            </h4>
-            <h4 className="h4 blueNuit" style={styles.titleCard}>
-            Accédez à des opportunités uniques
-            </h4>
-            <p style={styles.descriptionSidebar}>Que vous soyez une entreprise en quête de talents ou un freelance à la recherche de projets, inscrivez-vous pour accéder à des opportunités sur mesure et collaborer efficacement.</p>
-            <Button className="h4 small-btn-gradient" style={styles.findBtn}>
-          Inscrivez-vous
-        </Button>
-          </div>
-          
-        </Col>
-      </Row>
     </Container>
   );
 }
+const   CardComponent = ({
+    image,
+    title,
+    description
+}) => (
+  <Card style={styles.cardProfil} className="mb-4 p-2">
+    <Card.Body>
+      <Row>
+        <Col xs={12} md={5} className="position-relative text-center p-0">
+          <div className="profile-image-wrapper h-100">
+          
+            <Image
+              src={`${process.env.PUBLIC_URL}/images/workers/${image}`}
+              fluid
+              style={styles.imageProfil}
+              className="profile-image"
+            />
+            <div className="overlay-name">{title}</div>
+            <div className="overlay-name">{description}</div>
+          </div>
+        </Col>
 
-function ProfilBox({
-  bgColor,
-  titleColor,
-  descriptionColor,
-  imgBanner,
-  title,
-  subTitle,
-  description,
-  findBtnText,
-}) {
-  return (
-    <Col lg={6} sm={12} className={`text-start profil-column  ${bgColor}`}>
-      <div className="">
-        <img
-          src={`${process.env.PUBLIC_URL}/images/${imgBanner}`}
-          className="img-fluid"
-          alt="Profil Entreprise"
-          style={styles.profilImgBanner}
-        />
-        <h2 className="h2 gradientTitle" style={styles.titleCard}>
-          {subTitle}
-        </h2>
-        <h1 className={`h1 ${titleColor} mr-5`} style={styles.titleCard}>
-          {title}
-        </h1>
-        <p style={styles.descriptionCard} className={` ${descriptionColor} `}>
-          {description}
-        </p>
-        <Button className="h4 find-btn" style={styles.findBtn}>
-          {findBtnText}
-        </Button>
-      </div>
-    </Col>
-  );
-}
-export default About;
+       
+      </Row>
+      
+    </Card.Body>
+  </Card>
+);
+
+  const cardsData = [
+    {
+      id: 1,
+      title : "IT & Sécurité",
+      description : "Télé Opérateur, IT Specialist, Directeur Informatique ..."
+    },
+    {
+      id: 2,
+      title : "Développement Web & Mobile",
+      description : "Développeur Web, Front-End, Full Stack, Informatique ..."
+    },
+    {
+      id: 3,
+      title : "Design & Création",
+      description : "Graphiste, UI/UX Design-Product Design, Graphiste 3D ..."
+    },
+    {
+      id: 4,
+      title : "Marketing & Communication Digitale",
+      description : "WebMarketer, Spécialiste du Marketing Digital, Publicité ..."
+    },
+    
+    {
+      id: 5,
+      title : "IT & Sécurité",
+      description : "Télé Opérateur, IT Specialist, Directeur Informatique ..."
+    },
+    
+  ];
+
+
+
+export default Categories;

@@ -105,7 +105,7 @@ function HowItWorks({ title }) {
       </p>
       <Row className="container-fluid justify-content-center mt-3 g-4 ">
         {cardsData.map((card, index) => (
-          <Col key={index} sm={12} md={4} className="text-start ">
+          <Col key={index} sm={12} md={6} xl={4} className="text-start ">
             <CardComponent {...card} key={card.id} />
           </Col>
         ))}
