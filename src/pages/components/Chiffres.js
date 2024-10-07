@@ -37,7 +37,7 @@ const styles = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundColor: "var(--light-gray-wos)",
-    padding: "100px 150px",
+    padding: "100px 130px",
   },
   welcomeTitle: {
     color: "#1D1D39",

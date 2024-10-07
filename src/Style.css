@@ -124,6 +124,16 @@ body {
   font-weight: 600 !important;
   cursor: pointer !important;
 }
+.small-btn-gradient {
+  padding: 11px 27px !important;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #895EF6, #F03063, #FF7640) !important;
+  border: none !important;
+  border-radius: 100px !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+}
 .badge-container {
   background-color: var(--white-wos) !important;
   border-radius: 10px;
@@ -137,7 +147,10 @@ body {
   padding: 50px 30px !important;
   border-radius: 30px;
 }
-
+.card-gray{
+  background-color: var(--light-gray-wos);
+  border-radius: 40px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

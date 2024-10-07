@@ -15,15 +15,13 @@ const styles = {
     width: "45",
   },
   numberCard: {
-    fontSize:"80px",
+    fontSize: "80px",
     fontWeight: "600",
-
   },
   titleCard: {
     fontFamily: "Bricolage Grotesque",
     fontWeight: "600",
     margin: "10px 0px",
-
   },
   descriptionTitle: {
     fontFamily: "DM Sans",
@@ -47,7 +45,7 @@ const styles = {
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundColor: "var(--light-gray-wos)",
-    padding: "100px 150px",
+    padding: "100px 130px",
   },
   welcomeTitle: {
     color: "#1D1D39",
@@ -107,16 +105,15 @@ function HowItWorks({ title }) {
       </p>
       <Row className="container-fluid justify-content-center mt-3 g-4 ">
         {cardsData.map((card, index) => (
-          <Col key={index} sm={12}  md={4}   className="text-start ">
+          <Col key={index} sm={12} md={4} className="text-start ">
             <CardComponent {...card} key={card.id} />
           </Col>
         ))}
       </Row>
       <Row className="mt-5">
-      <Col>
-       
+        <Col>
           <Button className="h4 find-btn w-100" style={styles.findBtn}>
-          Lancez votre projet aujourd'hui
+            Lancez votre projet aujourd'hui
           </Button>
         </Col>
       </Row>
@@ -125,7 +122,7 @@ function HowItWorks({ title }) {
 }
 function CardComponent({ number, title, description }) {
   return (
-    <div className="bg-white h-100 p-2 card-number">
+    <div className="bg-white h-100 p-2 card-number ">
       <h1 className="text-gradient" style={styles.numberCard}>
         {number}
       </h1>

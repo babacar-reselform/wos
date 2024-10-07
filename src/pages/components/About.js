@@ -22,7 +22,7 @@ const styles = {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "right",
     borderRadius: "30px",
-    textAlign : "start",
+    textAlign: "start",
     padding: "30px",
     borderRadius: "30px",
   },
@@ -42,7 +42,7 @@ const styles = {
   },
 
   afterHeroContainer: {
-    padding: "100px 150px",
+    padding: "100px 0",
   },
   welcomeTitle: {
     color: "#1D1D39",
@@ -60,25 +60,81 @@ const styles = {
     fontWeight: "300",
   },
   findBtn: {
-    width: "min-content !important",
+    fontFamily : "DM Sans"
   },
 };
+const aboutDatas = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet consectur.",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur. Magna integer commodo et tortor id cras sit ut sed. Risus interdum elementum amet aliquet. Vel euismod duis dui nullam. Luctus et egestas donec at. Vestibulum vel quam vestibulum enim lacus suspendisse. Sit nunc cras risus quisque faucibus urna risus. Tortor tincidunt duis pharetra ipsum duis praesent malesuada. Ac porta venenatis risus sit integer sapien faucibus libero. Ornare mollis pulvinar in tincidunt aliquam vivamus pretium senectus. Sem sed praesent laoreet.",
+      "Quam phasellus purus quam est. Non aliquet condimentum varius viverra fusce pretium. Ut amet egestas tristique nibh scelerisque cursus.",
+      "Et in in consequat lacus in ac at felis nec. Enim ac amet laoreet dui mattis augue nullam pharetra sed. Risus ornare est pharetra mattis lorem. Vitae risus justo lorem dolor. At viverra donec diam arcu nibh ac. Vitae risus pellentesque feugiat vitae nunc eu. Vestibulum lectus consectetur proin fermentum.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Lorem ipsum dolor met consectur.",
+    description: [
+      "Lorem ipsum dolor sit amet consectetur. Magna integer commodo et tortor id cras sit ut sed. Risus interdum elementum amet aliquet. Vel euismod duis dui nullam. Luctus et egestas donec at. Vestibulum vel quam vestibulum enim lacus suspendisse. Sit nunc cras risus quisque faucibus urna risus. Tortor tincidunt duis pharetra ipsum duis praesent malesuada. Ac porta venenatis risus sit integer sapien faucibus libero. Ornare mollis pulvinar in tincidunt aliquam vivamus pretium senectus. Sem sed praesent laoreet.",
+      "Quam phasellus purus quam est. Non aliquet condimentum varius viverra fusce pretium. Ut amet egestas tristique nibh scelerisque cursus.",
+      "Et in in consequat lacus in ac at felis nec. Enim ac amet laoreet dui mattis augue nullam pharetra sed. Risus ornare est pharetra mattis lorem. Vitae risus justo lorem dolor. At viverra donec diam arcu nibh ac. Vitae risus pellentesque feugiat vitae nunc eu. Vestibulum lectus consectetur proin fermentum.",
+    ],
+  },
+];
 
 function About({ title }) {
   return (
-    <Container style={styles.afterHeroContainer}>
-        <div className="about-hero" style={styles.aboutHero}>
-          <h1 className="h1 text-white" style={styles.titleCard}>
-            Talents de haute qualité, tarifs inégalés
-          </h1>
-          <p style={styles.descriptionCard} className="text-gray2-wos ">
-            Profitez des meilleurs freelances, rigoureusement sélectionnés et
-            testés, à des prix<br/> défiant toute concurrence.
-          </p>
-          <Button className="h4 find-btn" style={styles.findBtn}>
-            Découvrez nos talents d'exception{" "}
-          </Button>
-        </div>
+    <Container className="afterHeroContainer" style={styles.afterHeroContainer}>
+      <div className="about-hero" style={styles.aboutHero}>
+        <h2 className="h2 text-white" style={styles.titleCard}>
+          Talents de haute qualité, tarifs inégalés
+        </h2>
+        <p style={styles.descriptionCard} className="text-gray2-wos ">
+          Profitez des meilleurs freelances, rigoureusement sélectionnés et
+          testés, à des prix
+          <br /> défiant toute concurrence.
+        </p>
+        <Button className="h4 find-btn" style={styles.findBtn}>
+          Découvrez nos talents d'exception{" "}
+        </Button>
+      </div>
+      <Row className="mt-5">
+        <Col md={12} lg={8} className="text-start">
+          {aboutDatas.map((data, index) => {
+            return (
+              <>
+                <h2 className="h2" style={styles.titleCard}>
+                  {data.title}
+                </h2>
+                {data.description.map((line) => {
+                  return (
+                    <p style={styles.descriptionCard} className="mt-3">
+                      {line}
+                    </p>
+                  );
+                })}
+              </>
+            );
+          })}
+        </Col>
+        <Col md={12} lg={4} className="text-start">
+          <div className=" p-2 card-number card-gray">
+            <h4 className="text-gradient" >
+            Rejoignez Wall Of Share
+            </h4>
+            <h4 className="h4 blueNuit" style={styles.titleCard}>
+            Accédez à des opportunités uniques
+            </h4>
+            <p style={styles.descriptionCard}>Que vous soyez une entreprise en quête de talents ou un freelance à la recherche de projets, inscrivez-vous pour accéder à des opportunités sur mesure et collaborer efficacement.</p>
+            <Button className="h4 small-btn-gradient" style={styles.findBtn}>
+          Inscrivez-vous
+        </Button>
+          </div>
+          
+        </Col>
+      </Row>
     </Container>
   );
 }
