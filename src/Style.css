@@ -57,7 +57,12 @@ body {
   background-color: #fff;
   border: none;
 }
-
+.navbar-signup{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
 .gradientTitle {
   background: linear-gradient(90deg, var(--violet-wos), var(--rose-wos), var(--orange-wos));
   font-family: "Bricolage Grotesque" !important;

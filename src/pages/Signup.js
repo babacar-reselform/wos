@@ -139,8 +139,7 @@ function SignUp() {
               img={`${process.env.PUBLIC_URL}/images/entreprise-card.png`}
               title="Je suis une entreprise"
               description="Lorem ipsum dolor sit lorem amet consectetur."
-            ></CardOverlay>
-
+            />
             <CardOverlay
               img={`${process.env.PUBLIC_URL}/images/freelance-card.png`}
               title="Je suis un freelance"
@@ -167,8 +166,7 @@ function CardOverlay({ img, title, description }) {
 
       <Card.ImgOverlay>
         {/* Use the title prop dynamically */}
-        <Card.Title className="titleCard"><Link  to='/signup/enterprise'   className="fw-bold App-link text-decoration-underline">
-        {title}</Link></Card.Title>
+        <Link to="/signup/enterprise" className="text-decoration-none text-white"><Card.Title className="titleCard">{title}</Card.Title></Link> 
         <Card.Text className="titleDescription">{description}</Card.Text>
       </Card.ImgOverlay>
     </Card>
