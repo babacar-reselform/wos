@@ -11,6 +11,10 @@
   --white-wos: #fff;
 
 }
+h1,h2,h3,h4,h5,h6,p{
+  padding: 0;
+  margin : 0;
+}
 
 body {
   font-family: "Bricolage Grotesque" !important;
@@ -57,12 +61,14 @@ body {
   background-color: #fff;
   border: none;
 }
-.navbar-signup{
+
+.navbar-signup {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
 }
+
 .gradientTitle {
   background: linear-gradient(90deg, var(--violet-wos), var(--rose-wos), var(--orange-wos));
   font-family: "Bricolage Grotesque" !important;
@@ -70,6 +76,7 @@ body {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
+
 .text-gradient {
   background: linear-gradient(90deg, var(--violet-wos) 0%, var(--rose-wos) 10%, var(--orange-wos) 30%);
   font-family: "Bricolage Grotesque" !important;
@@ -85,7 +92,7 @@ body {
 
 .formContainer {
   width: 55% !important;
-  margin-top: 1.5rem;
+  margin-top: 0rem;
 }
 
 .box-container {
@@ -129,6 +136,7 @@ body {
   font-weight: 600 !important;
   cursor: pointer !important;
 }
+
 .small-btn-gradient {
   padding: 11px 27px !important;
   margin-top: 10px;
@@ -139,6 +147,7 @@ body {
   font-weight: 600 !important;
   cursor: pointer !important;
 }
+
 .badge-container {
   background-color: var(--white-wos) !important;
   border-radius: 10px;
@@ -148,14 +157,119 @@ body {
   font-weight: 300;
   color: var(--gray-wos) !important;
 }
-.card-number{
+
+.card-number {
   padding: 50px 30px !important;
   border-radius: 30px;
 }
-.card-gray{
+
+.card-gray {
   background-color: var(--light-gray-wos);
   border-radius: 40px;
 }
+
+.formBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: var(--light-gray-wos);
+}
+
+.multistep-navigation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid var(--gray-wos);
+  width: 100%;
+  display: flex;
+  padding: 15px 0px;
+}
+.multistep-form-body{
+  width: 50%;
+  .form-label{
+    color: var(--bleu-nuit-wos) !important;
+  }
+}
+.welcome-title{
+  color: #1D1D39;
+  font-size: 60px;
+  font-family: "Bricolage Grotesque";
+  text-align: left;
+  font-weight: 600;
+}
+.welcome-subTitle{
+  color: var(--gray-wos);
+  font-size: 25px;
+  font-family: "DM Sans";
+  font-weight: 300;
+  text-align: left;
+  
+}
+.forget-password{
+    color: #6F6F6F;
+    font-family: "DM Sans";
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+}
+.step-text{
+  font-family: "DM Sans" !important;
+  font-size: 18px;
+  font-weight: 400;
+}
+.wos-form-input{
+  border-radius: 80px;
+  padding: 11px 27px;
+}
+.wos-form-label{
+  text-align: left !important;
+}
+.custom-select {
+  position: relative;
+  width: 200px;
+  font-family: Arial, sans-serif;
+}
+
+.selected-option {
+  padding: 10px;
+  border-radius: 20px; /* Rounds the main box */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.options-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounds the dropdown box */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  margin-top: 5px;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 20px; /* Rounds the individual option items */
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-select.active .options-list {
+  display: block;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -215,12 +329,15 @@ input {
 
   }
 }
+
 @media (max-width: 1300px) {
 
   .profil-column {
-
     padding: 100px 55px !important;
-    
+
+  }
+  .multistep-form-body{
+    width: 60%;
   }
 }
 
@@ -236,6 +353,9 @@ input {
   .contact-container {
     padding: 100px 10px !important;
 
+  }
+  .multistep-form-body{
+    width: 100%;
   }
 }
 
@@ -367,7 +487,7 @@ input {
 
 @media (max-width: 1200px) {}
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
 
   .g-5,
   .g-4,
@@ -379,5 +499,11 @@ input {
 
   .profil-column {
     padding: 50px 10px !important;
+  }
+  .welcome-title{
+    font-size: 40px;
+  }
+  .welcome-subTitle{
+    font-size: 20px;  
   }
 }

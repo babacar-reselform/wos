@@ -2,37 +2,35 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Form, Button, Navbar } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import '../App.css';
+import "../App.css";
 import { Link } from "react-router-dom";
 import NavbarWOS from "./components/NavbarWOS";
 import WelcomeTilteWOS from "./components/WelcomeTitleWOS";
 
 // Externalized Styles
 const styles = {
-  body: {
-
-  },
-  blueNuit : {
-    color : "#1D1D39"
+  body: {},
+  blueNuit: {
+    color: "#1D1D39",
   },
   navbar: {
     padding: "15px",
     borderBottom: "1px solid #ddd",
     backgroundColor: "#fff",
-    border :"none"
+    border: "none",
   },
   container: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    width : "100%"
+    width: "100%",
   },
 
   brand: {
     display: "flex",
     alignItems: "center",
   },
-  logo: { 
+  logo: {
     marginRight: "10px",
     width: "140px",
   },
@@ -61,7 +59,7 @@ const styles = {
     color: "#1D1D39",
     // fontSize: "60px",
     textAlign: "left",
-    fontWeight : "600",
+    fontWeight: "600",
   },
   subTitle: {
     color: "#6F6F6F",
@@ -75,11 +73,11 @@ const styles = {
     justifyContent: "center",
   },
   formInput: {
-    margin: "70px 0px",
+    padding : "69px 0px"
   },
   arrowIcon: {
     marginRight: "5px",
-    fontWeight : "900 !important" 
+    fontWeight: "900 !important",
   },
   form: {
     width: "100%",
@@ -109,17 +107,19 @@ const styles = {
     fontWeight: "600",
     cursor: "pointer",
   },
-
- 
 };
 
 function Login() {
   return (
     <div>
-      <NavbarWOS/>
+      <NavbarWOS />
 
       <div className="pageWrapper">
-       <WelcomeTilteWOS title="Bienvenue chez" subTitle="Se connecter pour continuer sur Wall Of Share"/>
+        <WelcomeTilteWOS
+          title="Bienvenue chez"
+          subTitle="Se connecter pour continuer sur Wall Of Share"
+          suffix = "!"
+        />
 
         {/* Login Form */}
         <Container
@@ -147,20 +147,23 @@ function Login() {
                   style={styles.formControl}
                 />
               </Form.Group>
-              <p className="text-end h5 " style={styles.subTitle}>
+              <p className="text-end forget-password" >
                 J'ai perdu mon mot de passe
               </p>
             </div>
-            <Button
-              type="submit"
-              className="h4 submitButton"
-            >
+            <Button type="submit" className="h4 submitButton">
               Se connecter
             </Button>
-          <p className="h5 text-center mt-4 App-link blueNuit">
-            Vous n'avez pas encore de compte? <Link  to='/signup'  href="" className="fw-bold App-link text-decoration-underline">Inscrivez-vous</Link>
-          </p>
-          
+            <p className="h5 text-center mt-4 App-link blueNuit">
+              Vous n'avez pas encore de compte?{" "}
+              <Link
+                to="/signup"
+                href=""
+                className="fw-bold App-link text-decoration-underline"
+              >
+                Inscrivez-vous
+              </Link>
+            </p>
           </Form>
         </Container>
       </div>

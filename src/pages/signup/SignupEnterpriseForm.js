@@ -8,7 +8,10 @@ const SignUpEnterpriseForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
     name: '',
-    email: ''
+    companyName: '',
+    email: '',
+    numberPhone: '',
+    country: '',
   });
 
   // Handle next step
@@ -43,6 +46,8 @@ const SignUpEnterpriseForm = () => {
           formData={formData}
           handleChange={handleChange}
           nextStep={nextStep}
+          step={step}
+          title={"Inscrivez vous en 2 minutes seulement !"}
         />
       );
     case 2:
@@ -52,6 +57,8 @@ const SignUpEnterpriseForm = () => {
           handleChange={handleChange}
           nextStep={nextStep}
           prevStep={prevStep}
+          step={step}
+
         />
       );
     case 3:
@@ -60,6 +67,8 @@ const SignUpEnterpriseForm = () => {
           formData={formData}
           prevStep={prevStep}
           submitForm={submitForm}
+          step={step}
+
         />
       );
     default:

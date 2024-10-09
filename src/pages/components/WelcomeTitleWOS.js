@@ -22,26 +22,21 @@ const styles = {
     textAlign: "left",
     fontWeight: "600",
   },
-  subTitle: {
-    color: "#6F6F6F",
-    fontFamily: "'DM Sans'",
-    textAlign: "left",
-    // fontSize: "25px",
-    fontWeight: "300",
-  },
+
 };
 
-function WelcomeTilteWOS({ title, subTitle }) {
+function WelcomeTilteWOS({ title, subTitle,suffix }) {
   return (
     <div className="text-center pt-5 container welcomeContainer">
-      <h1 style={styles.welcomeTitle} className="display-3 ">
+      <h1  className="welcome-title">
         {title}
-         <span className="gradientTitle"> Wall of Share </span>!
+         <span className="gradientTitle"> <br/>Wall of Share </span>{suffix}
       </h1>
-      <p style={styles.subTitle} className="h5">
+      <p style={styles.subTitle} className="welcome-subTitle">
         {subTitle}
       </p>
     </div>
   );
 }
+
 export default WelcomeTilteWOS;

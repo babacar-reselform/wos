@@ -19,7 +19,7 @@ const styles = {
   blueNuit: {
     color: "#1D1D39",
   },
-
+ 
   container: {
     display: "flex",
     justifyContent: "space-between",
@@ -126,24 +126,26 @@ function SignUp() {
     <div>
       <NavbarWOS />
 
-      <div className="pageWrapper pb-4">
+      <div className="pageWrapper pb-4" style={styles.fullVh}>
         <WelcomeTilteWOS
           title="Bonjour ! Qu'est-ce qui vous amène chez"
           subTitle="Inscrivez-vous et accédez à toutes les fonctionnalités de Wall Of Share."
+          suffix = "?"
+
         />
 
         {/* Login Form */}
         <Container className="profilContainer mt-5 mx-auto ">
-          <div className="row g-5 text-center pt-5  ">
+          <div className="row g-5 text-center pt-4 ">
             <CardOverlay
               img={`${process.env.PUBLIC_URL}/images/entreprise-card.png`}
               title="Je suis une entreprise"
-              description="Lorem ipsum dolor sit lorem amet consectetur."
+              description="Trouvez des freelances qualifiés pour vos projets."
             />
             <CardOverlay
               img={`${process.env.PUBLIC_URL}/images/freelance-card.png`}
               title="Je suis un freelance"
-              description="Lorem ipsum dolor sit lorem amet consectetur."
+              description="Trouvez des missions qui valorisent vos compétences."
             />
           </div>
         </Container>
